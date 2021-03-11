@@ -8,10 +8,14 @@
   </head>
   <body>
     <script>
-      let total;
-      let i = prompt("input number");
-      for (; i < 10; ++i) {
-        total = total + i;
+      for (;;) {
+        let number = parseInt(prompt("Nhap so vao day"));
+        if (number > 0 && typeof number == "number") {
+          alert("La so nguyen duong");
+          break;
+        } else {
+          alert("Khong la so nguyen duong, nhap lai");
+        }
       }
     </script>
   </body>

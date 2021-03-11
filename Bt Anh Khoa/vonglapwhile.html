@@ -8,11 +8,14 @@
   </head>
   <body>
     <script>
-      let total;
-      let i = prompt("input number");
-      for (; i < 10; ++i) {
-        total = total + i;
+      let total = 0,
+        num = 0;
+      while (num != -1) {
+        num = +prompt("enter your number");
+        if (num == -1) continue;
+        total += num;
       }
+      document.write(`tong la: ${total}`);
     </script>
   </body>
 </html>
