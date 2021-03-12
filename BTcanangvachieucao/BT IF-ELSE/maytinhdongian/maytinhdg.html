@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .color-blue {
+        background-color: rgb(85, 158, 255);
+        color: white;
+      }
+      .color-dark {
+        background-color: rgb(199, 199, 199);
+      }
+      .input {
+        width: 100%;
+      }
+      table {
+        height: 100px;
+        width: 400px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px solid black;
+      }
+      button {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table id="demo" onclick="demo">
+      <tr>
+        <td colspan="7">
+          <input
+            class="input"
+            id="result"
+            type="text"
+            style="text-align: right"
+            readonly
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><button class="color-dark">Rad</button></td>
+        <td><button>...</button></td>
+        <td><button class="color-dark">x!</button></td>
+        <td><button class="color-dark">(</button></td>
+        <td><button class="color-dark">)</button></td>
+        <td><button class="color-dark">%</button></td>
+        <td><button class="color-dark">AC</button></td>
+      </tr>
+      <tr>
+        <td><button class="color-dark">lnv</button></td>
+        <td><button class="color-dark">sin</button></td>
+        <td><button class="color-dark">In</button></td>
+        <td><button>7</button></td>
+        <td><button>8</button></td>
+        <td><button>9</button></td>
+        <td><button>&divide;</button></td>
+      </tr>
+      <tr>
+        <td><button class="color-dark">&pi;</button></td>
+        <td><button class="color-dark">cos</button></td>
+        <td><button class="color-dark">log</button></td>
+        <td><button>4</button></td>
+        <td><button>5</button></td>
+        <td><button onclick="action1(6)">6</button></td>
+        <td><button class="color-dark">*</button></td>
+      </tr>
+      <tr>
+        <td><button class="color-dark">e</button></td>
+        <td><button class="color-dark">tan</button></td>
+        <td><button class="color-dark">&Sqrt;</button></td>
+        <td><button>1</button></td>
+        <td><button>2</button></td>
+        <td><button onclick="numberAction(3)">3</button></td>
+        <td><button class="color-dark">-</button></td>
+      </tr>
+      <tr>
+        <td><button class="color-dark">Ans</button></td>
+        <td><button class="color-dark">EXP</button></td>
+        <td>
+          <button class="color-dark">x<sup>y</sup></button>
+        </td>
+        <td><button>0</button></td>
+        <td><button>.</button></td>
+        <td onclick="equal()"><button class="color-blue">=</button></td>
+        <td><button onclick="action('+')" class="color-dark">+</button></td>
+      </tr>
+    </table>
+    <script src="maytinhdongian.js"></script>
+  </body>
+</html>
