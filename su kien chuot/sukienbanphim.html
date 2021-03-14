@@ -6,14 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <style></style>
-  <body>
-    <form action="nobita">
-      <img
-        src="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Nobita.png"
-        alt=""
-        style="position: absolute"
-      />;
-    </form>
+  <body onload="docReady()">
+    <img
+      id="nobita"
+      src="https://png.pngtree.com/png-clipart/20190903/original/pngtree-running-girl-png-image_4439958.jpg"
+      style="position: absolute; left: 0; top: 0"
+      height="200"
+      width="160"
+    />
+    <script>
+      function upArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) - 5 + "px";
+      }
+      function downArrowPressed() {
+        var element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) + 5 + "px";
+      }
+      function leftArrowPressed() {
+        var element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) - 5 + "px";
+      }
+      function rightArrowPressed() {
+        var element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) + 5 + "px";
+      }
+      function moveSelection(evt) {
+        switch (evt.keyCode) {
+          case 37:
+            leftArrowPressed();
+            break;
+          case 39:
+            rightArrowPressed();
+            break;
+          case 38:
+            upArrowPressed();
+            break;
+          case 40:
+            downArrowPressed();
+            break;
+        }
+      }
+      function docReady() {
+        window.addEventListener("keydown", moveSelection);
+      }
+    </script>
   </body>
 </html>
